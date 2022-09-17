@@ -212,7 +212,7 @@ class Booking {
       );
       bookingEmail(
         booking.apartmentOwnerId.fullName ||
-          booking.apartmentOwnerId.companyName,
+        booking.apartmentOwnerId.companyName,
         booking.apartmentOwnerId.email,
         booking.apartmentId.apartmentName,
         booking.checkInDate,

@@ -9,6 +9,7 @@ cron.schedule(DAILY_CRON_SCHEDULE, async () => {
   const bookings = await BookingSchema.find({
     bookingStatus: BOOKING_STATUS.PENDING,
   });
+  
   bookings.forEach(async (booking) => {
     // createdAt is a more than 24 hours old booking
     if (booking.createdAt < Date.now() - 24 * 60 * 60 * 1000) {
